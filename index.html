@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slotter Empire</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud-top">
+        <div class="brand">SLOTTER EMPIRE</div>
+        <div class="stats">
+          <div><span>Cash</span><strong id="cashValue">R 2,500</strong></div>
+          <div><span>Wanted</span><strong id="wantedValue">0★</strong></div>
+          <div><span>Health</span><strong id="healthValue">100%</strong></div>
+          <div><span>District</span><strong id="districtValue">Johannesburg CBD</strong></div>
+        </div>
+      </header>
+
+      <main class="game-layout">
+        <canvas id="gameCanvas" width="1200" height="720"></canvas>
+
+        <aside class="panel">
+          <div class="card">
+            <h3>Mission</h3>
+            <p id="missionText">Collect a package from Hillbrow.</p>
+          </div>
+
+          <div class="card">
+            <h3>Controls</h3>
+            <ul>
+              <li>WASD / Arrow Keys: move</li>
+              <li>E: enter or exit vehicle</li>
+              <li>Space: interact / complete task</li>
+              <li>Shift: boost speed</li>
+            </ul>
+          </div>
+
+          <div class="card mini-map-wrap">
+            <h3>World Map</h3>
+            <canvas id="miniMap" width="220" height="140"></canvas>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
