@@ -9,37 +9,61 @@
   <body>
     <div class="game-shell">
       <header class="hud-top">
-        <div class="brand">SLOTTER EMPIRE</div>
+        <div class="brand-wrap">
+          <div class="brand">SLOTTER EMPIRE</div>
+          <div class="sub-brand">Johannesburg underworld</div>
+        </div>
+
         <div class="stats">
-          <div><span>Cash</span><strong id="cashValue">R 2,500</strong></div>
-          <div><span>Wanted</span><strong id="wantedValue">0★</strong></div>
-          <div><span>Health</span><strong id="healthValue">100%</strong></div>
-          <div><span>District</span><strong id="districtValue">Johannesburg CBD</strong></div>
+          <div class="stat">
+            <span>Cash</span>
+            <strong id="cashValue">R 2,500</strong>
+          </div>
+          <div class="stat">
+            <span>Wanted</span>
+            <strong id="wantedValue">0★</strong>
+          </div>
+          <div class="stat">
+            <span>Health</span>
+            <strong id="healthValue">100%</strong>
+          </div>
+          <div class="stat">
+            <span>District</span>
+            <strong id="districtValue">Johannesburg CBD</strong>
+          </div>
         </div>
       </header>
 
+      <div class="action-toolbar">
+        <button id="saveButton">Save</button>
+        <button id="resetButton">Reset</button>
+      </div>
+
       <main class="game-layout">
-        <canvas id="gameCanvas" width="1200" height="720"></canvas>
+        <canvas id="gameCanvas" width="1280" height="760"></canvas>
 
         <aside class="panel">
-          <div class="card">
+          <div class="card mission-card">
             <h3>Mission</h3>
             <p id="missionText">Collect a package from Hillbrow.</p>
+            <p id="objectiveText">Route to the drop point.</p>
           </div>
 
           <div class="card">
-            <h3>Controls</h3>
-            <ul>
-              <li>WASD / Arrow Keys: move</li>
-              <li>E: enter or exit vehicle</li>
-              <li>Space: interact / complete task</li>
-              <li>Shift: boost speed</li>
-            </ul>
+            <h3>Loadout</h3>
+            <p id="weaponText">Weapon: Pistol</p>
+            <p id="ammoText">Ammo: infinite</p>
+            <p id="vehicleText">Vehicle: on foot</p>
           </div>
 
           <div class="card mini-map-wrap">
             <h3>World Map</h3>
             <canvas id="miniMap" width="220" height="140"></canvas>
+          </div>
+
+          <div class="card">
+            <h3>World Feed</h3>
+            <ul id="feedList"></ul>
           </div>
         </aside>
       </main>
